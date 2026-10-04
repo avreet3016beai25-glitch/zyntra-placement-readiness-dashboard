@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Report | Zyntra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dsa.html">DSA Tracker</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="projects.html">Projects</a>
+        <a href="report.html">Weekly Report</a>
+        <a href="placements.html">Placements</a>
+        <a href="resources.html">Resources</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h2>Weekly Report</h2>
+          <p>Turn your recent work into a concise weekly summary.</p>
+        </div>
+        <div class="card report-card">
+          <div id="report-highlights" class="report-highlights"></div>
+          <p id="report-period" class="meta"></p>
+          <div class="report-actions">
+            <button class="btn btn-primary" id="generate-report">Generate Report</button>
+            <button class="btn btn-secondary" id="download-report">Download PDF</button>
+          </div>
+          <div id="report-preview" class="report-preview"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up / Login | Zyntra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dsa.html">DSA Tracker</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="projects.html">Projects</a>
+        <a href="placements.html">Placements</a>
+        <a href="resources.html">Resources</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h2>Authentication</h2>
+          <p>Create an account or log in to save and view your personal profile.</p>
+        </div>
+
+        <div class="auth-shell">
+          <div id="auth-choice" class="auth-choice">
+            <button id="show-login" class="btn btn-secondary" type="button">Login</button>
+            <button id="show-signup" class="btn btn-secondary" type="button">Sign Up</button>
+            <a class="btn btn-quiet" href="index.html">Skip for now</a>
+          </div>
+
+          <div id="signup-card" class="card auth-card hidden">
+            <h3>Sign Up</h3>
+            <form id="signup-form" class="form-card" novalidate>
+              <label class="form-label">
+                Full name
+                <input type="text" id="signup-name" placeholder="Full name" required />
+                <span class="field-error" id="signup-name-error"></span>
+              </label>
+              <label class="form-label">
+                Email
+                <input type="email" id="signup-email" placeholder="Email" />
+                <span class="field-error" id="signup-email-error"></span>
+              </label>
+              <label class="form-label">
+                Phone number
+                <input type="tel" id="signup-phone" placeholder="Phone number" />
+                <span class="field-error" id="signup-phone-error"></span>
+              </label>
+              <label class="form-label">
+                Password
+                <input type="password" id="signup-password" placeholder="Password" required />
+                <span class="field-error" id="signup-password-error"></span>
+              </label>
+              <label class="form-label">
+                Branch
+                <input type="text" id="signup-branch" placeholder="Branch" required />
+                <span class="field-error" id="signup-branch-error"></span>
+              </label>
+              <label class="form-label">
+                CGPA
+                <input type="number" id="signup-cgpa" placeholder="CGPA" min="0" max="10" step="0.01" required />
+                <span class="field-error" id="signup-cgpa-error"></span>
+              </label>
+              <label class="form-label">
+                Skills
+                <input type="text" id="signup-skills" placeholder="Skills (comma separated)" />
+              </label>
+              <label class="form-label">
+                Resume URL
+                <input type="url" id="signup-resume" placeholder="Resume link" />
+              </label>
+              <label class="form-label">
+                GitHub URL
+                <input type="url" id="signup-github" placeholder="GitHub link" />
+              </label>
+              <label class="form-label">
+                LinkedIn URL
+                <input type="url" id="signup-linkedin" placeholder="LinkedIn link" />
+              </label>
+              <label class="form-label">
+                LeetCode URL
+                <input type="url" id="signup-leetcode" placeholder="LeetCode link" />
+              </label>
+              <label class="form-label">
+                GeeksforGeeks URL
+                <input type="url" id="signup-geeks" placeholder="GeeksforGeeks link" />
+              </label>
+              <button class="btn btn-primary" type="submit">Create Account</button>
+            </form>
+          </div>
+
+          <div id="login-card" class="card auth-card hidden">
+            <h3>Login</h3>
+            <form id="login-form" class="form-card" novalidate>
+              <label class="form-label">
+                Email or phone
+                <input type="text" id="login-email" placeholder="Email or phone" required />
+                <span class="field-error" id="login-email-error"></span>
+              </label>
+              <label class="form-label">
+                Password
+                <input type="password" id="login-password" placeholder="Password" required />
+                <span class="field-error" id="login-password-error"></span>
+              </label>
+              <button class="btn btn-primary" type="submit">Login</button>
+              <div class="forgot-password-row">
+                <button id="show-forgot-password" class="btn btn-secondary" type="button">Forgot password?</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="forgot-password-card" class="card auth-card hidden">
+            <h3>Reset password</h3>
+            <form id="forgot-password-form" class="form-card" novalidate>
+              <label class="form-label">
+                Email or phone
+                <input type="text" id="forgot-email" placeholder="Enter your email or phone" required />
+                <span class="field-error" id="forgot-email-error"></span>
+              </label>
+              <div class="forgot-actions">
+                <button class="btn btn-primary" type="submit">Generate reset token</button>
+                <button id="back-to-login" class="btn btn-secondary" type="button">Back to login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="auth-message" class="auth-message"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

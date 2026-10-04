@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Zyntra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dsa.html">DSA Tracker</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="projects.html">Projects</a>
+        <a href="report.html">Weekly Report</a>
+        <a href="placements.html">Placements</a>
+        <a href="resources.html">Resources</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h2>Project portfolio</h2>
+          <p>Keep your work, technology stack, and live links ready to share.</p>
+        </div>
+        <div class="card split-layout">
+          <form id="project-form" class="form-card">
+            <h3>Add a project</h3>
+            <label class="form-label">Project name<input type="text" id="project-name" maxlength="100" placeholder="Project name" required /></label>
+            <label class="form-label">GitHub repository<input type="url" id="project-github" placeholder="https://github.com/you/project" /></label>
+            <label class="form-label">Live demo<input type="url" id="project-demo" placeholder="https://project.example" /></label>
+            <label class="form-label">Technologies<input type="text" id="project-tech" maxlength="160" placeholder="React, Node.js, SQLite" /></label>
+            <label class="form-label">Status<select id="project-status"><option value="In Progress">In progress</option><option value="Planned">Planned</option><option value="Completed">Completed</option><option value="On Hold">On hold</option></select></label>
+            <button class="btn btn-primary" type="submit">Add project</button>
+          </form>
+          <div class="project-records">
+            <div class="project-toolbar">
+              <p id="project-count" class="meta">0 projects</p>
+              <label class="form-label">Search<input type="search" id="project-search" placeholder="Project or technology" /></label>
+              <label class="form-label">Status<select id="project-filter"><option value="all">All statuses</option><option value="Planned">Planned</option><option value="In Progress">In progress</option><option value="Completed">Completed</option><option value="On Hold">On hold</option></select></label>
+            </div>
+            <div id="project-list" class="card-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

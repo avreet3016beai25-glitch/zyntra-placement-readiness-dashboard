@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources | Zyntra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dsa.html">DSA Tracker</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="projects.html">Projects</a>
+        <a href="report.html">Weekly Report</a>
+        <a href="placements.html">Placements</a>
+        <a href="resources.html">Resources</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h2>Study Resources</h2>
+          <p>Keep curated videos, notes, and websites for DSA, development, and interviews in one place.</p>
+        </div>
+        <div class="card split-layout">
+          <form id="resource-form" class="form-card">
+            <h3>Add a Study Resource</h3>
+            <label class="form-label">Resource title<input type="text" id="resource-title" maxlength="100" placeholder="Resource title" required /></label>
+            <label class="form-label">Topic<input type="text" id="resource-topic" maxlength="60" placeholder="e.g. Graph algorithms" /></label>
+            <label class="form-label">Web page<input type="url" id="resource-link" placeholder="https://example.com" required /></label>
+            <textarea id="resource-desc" rows="3" placeholder="Why it helps"></textarea>
+            <button class="btn btn-primary" type="submit">Save resource</button>
+          </form>
+          <div class="resource-records">
+            <div class="resource-toolbar">
+              <p id="resource-count" class="meta">0 resources</p>
+              <label class="form-label">Search<input type="search" id="resource-search" placeholder="Title, topic, notes" /></label>
+              <label class="form-label">Topic<select id="resource-filter"><option value="all">All topics</option></select></label>
+            </div>
+            <div id="resource-list" class="card-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Recommended learning</h2>
+          <p>Hand-picked references for practice, building, and the tools around your work.</p>
+        </div>
+        <div class="resource-recommendation-grid">
+          <article class="list-item recommended-resource">
+            <p class="eyebrow">Data structures &amp; algorithms</p>
+            <h3>NeetCode roadmap</h3>
+            <p>A structured path through common interview problem patterns.</p>
+            <a href="https://neetcode.io/roadmap" target="_blank" rel="noopener noreferrer">Explore the roadmap</a>
+          </article>
+          <article class="list-item recommended-resource">
+            <p class="eyebrow">Web development</p>
+            <h3>MDN Learn</h3>
+            <p>Practical guides to HTML, CSS, JavaScript, and the web platform.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener noreferrer">Browse MDN lessons</a>
+          </article>
+          <article class="list-item recommended-resource">
+            <p class="eyebrow">Git &amp; GitHub</p>
+            <h3>GitHub Skills</h3>
+            <p>Short, hands-on courses that teach GitHub workflows in a repository.</p>
+            <a href="https://skills.github.com/" target="_blank" rel="noopener noreferrer">Start a course</a>
+          </article>
+          <article class="list-item recommended-resource">
+            <p class="eyebrow">Developer tools</p>
+            <h3>The Missing Semester</h3>
+            <p>Build confidence with the command line, shell tools, editors, and version control.</p>
+            <a href="https://missing.csail.mit.edu/" target="_blank" rel="noopener noreferrer">View the course</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

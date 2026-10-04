@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "email": "autotest_1850210275@example.com",
+      "profile": {
+        "branch": "CSE",
+        "cgpa": "9.0",
+        "name": "Auto Test"
+      }
+    },
+    {
+      "email": "avreet1706@gmail.com",
+      "profile": {
+        "name": "sdfghjkl;",
+        "branch": "dfg",
+        "cgpa": "9.8",
+        "skills": [
+          "dfghjkl;'poiuytr"
+        ],
+        "resume": "htttps://sdrty7i8uo9p0iouh",
+        "github": "htttps://sdrty7i8uo9p0iouh",
+        "linkedin": "htttps://sdrty7i8uo9p0iouh",
+        "leetcode": "htttps://sdrty7i8uo9p0iouh",
+        "geeksforgeeks": "htttps://sdrty7i8uo9p0iouh"
+      }
+    },
+    {
+      "email": "avreet17@gmail.com",
+      "profile": {
+        "name": "Avreet",
+        "branch": "dfg",
+        "cgpa": "9.8",
+        "skills": [],
+        "resume": "htttps://sdrty7i8uo9p0iouh",
+        "github": "htttps://sdrty7i8uo9p0iouh",
+        "linkedin": "htttps://sdrty7i8uo9p0iouh",
+        "leetcode": "htttps://sdrty7i8uo9p0iouh",
+        "geeksforgeeks": "htttps://sdrty7i8uo9p0iouh",
+        "dailyGoals": [
+          "Solve 2 DSA Problems",
+          "Learn 1 SQL Topic",
+          "Finish Python Project",
+          "Apply to 3 Companies"
+        ],
+        "workSummary": "Focused on DSA practice and project building.",
+        "currentProject": "Portfolio Website",
+        "currentCertification": "Python",
+        "placementTarget": "Microsoft"
+      }
+    },
+    {
+      "email": "avreet3016.beai25@chitkara.edu.in",
+      "profile": {
+        "name": "garima",
+        "branch": "cse",
+        "cgpa": "9.4",
+        "skills": [
+          "python"
+        ],
+        "resume": "https:/fyyhhvgvgv/vbuhu",
+        "github": "https:/gtyu/fgtyyuhbh",
+        "linkedin": "https:/gtyu/fgtyyuhbh",
+        "leetcode": "https:/gtyu/fgtyyuhbh",
+        "geeksforgeeks": "https:/gtyu/fgtyyuhbh"
+      }
+    }
+  ]
+}

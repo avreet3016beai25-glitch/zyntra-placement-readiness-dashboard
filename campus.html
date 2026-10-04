@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For campus | Zyntra</title>
+    <meta name="description" content="Request a Zyntra walkthrough for your campus career preparation program." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="marketing.css" />
+  </head>
+  <body class="marketing-page">
+    <header class="topbar marketing-topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav class="marketing-nav" aria-label="Main navigation">
+        <details class="m-workspace-menu">
+          <summary>Workspace</summary>
+          <div class="m-workspace-links">
+            <a href="dashboard.html">Dashboard</a><a href="onboarding.html">Set Up Profile</a>
+            <a href="dsa.html">DSA Tracker</a><a href="certifications.html">Certifications</a>
+            <a href="projects.html">Projects</a><a href="report.html">Weekly Report</a>
+            <a href="placements.html">Placements</a><a href="resources.html">Resources</a>
+            <a href="profile.html">Profile</a>
+          </div>
+        </details>
+        <a href="about.html">About</a>
+        <a href="platform.html">Platform</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="campus.html" aria-current="page">For campus</a>
+      </nav>
+      <div class="marketing-actions"><a class="marketing-signin" href="auth.html">Sign in</a><a class="marketing-button marketing-button-small" href="auth.html">Start free</a></div>
+    </header>
+
+    <main class="marketing-main">
+      <section class="m-page-hero">
+        <div class="m-container">
+          <p class="m-eyebrow"><span class="m-eyebrow-dot"></span> For learners and campus teams</p>
+          <h1>Make career preparation easier to see.</h1>
+          <p>Explore how a connected workspace could support students as they build skills, prepare for interviews, and organize placement goals.</p>
+        </div>
+      </section>
+      <section class="m-campus-section">
+        <div class="m-container m-campus-layout">
+          <div class="m-campus-copy">
+            <p class="m-eyebrow">For campus teams</p>
+            <h2>Bring everyday student progress into view.</h2>
+            <p>Request a guided walkthrough and tell us about your learners, program, or placement process. We will use your context to make the conversation useful.</p>
+            <div class="m-campus-note"><span class="m-campus-note-mark">Z</span><span>Built for the everyday work behind career readiness.</span></div>
+          </div>
+          <form class="m-demo-form" id="demo-request-form">
+            <div class="m-form-heading"><div><span class="m-form-kicker">LET'S TALK</span><h3>Request a walkthrough</h3></div><span class="m-form-index">01 / 01</span></div>
+            <div class="m-form-fields">
+              <label>Your name<input type="text" name="name" autocomplete="name" placeholder="Jordan Lee" minlength="2" maxlength="100" required /></label>
+              <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@college.edu" maxlength="254" required /></label>
+              <label class="m-field-full">I am a
+                <select name="role" required>
+                  <option value="" disabled selected>Select your role</option>
+                  <option value="student">Student</option>
+                  <option value="educator">Educator</option>
+                  <option value="career-team">Career services team</option>
+                </select>
+              </label>
+              <label class="m-field-full">School or organization <span class="m-optional">Optional</span><input type="text" name="organization" autocomplete="organization" placeholder="Where are you studying or working?" maxlength="120" /></label>
+              <label class="m-field-full">What would you like to explore? <span class="m-optional">Optional</span><textarea name="message" rows="3" placeholder="A little context helps us make the walkthrough useful." maxlength="1000"></textarea></label>
+            </div>
+            <button class="marketing-button m-submit-button" type="submit">Send request <span aria-hidden="true">&#8594;</span></button>
+            <p class="m-form-status" id="demo-request-status" role="status" aria-live="polite"></p>
+            <p class="m-form-privacy">Your details are stored securely so the Zyntra team can review your request.</p>
+          </form>
+        </div>
+      </section>
+      <section class="m-page-cta"><div class="m-container m-page-cta-inner"><div><h2>Exploring as a student?</h2><p>Build a personal workspace and start tracking your own next steps.</p></div><a class="marketing-button" href="auth.html">Create an account <span aria-hidden="true">&#8594;</span></a></div></section>
+    </main>
+    <footer class="m-footer"><div class="m-container m-footer-inner"><a class="brand" href="index.html">Zyntra</a><span>Make the next step count.</span><div><a href="about.html">About</a><a href="platform.html">Platform</a><a href="how-it-works.html">How it works</a><a href="campus.html">For campus</a><a href="auth.html">Sign in</a></div><small>&copy; 2026 Zyntra</small></div></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "zyntra-backend",
+  "version": "1.0.0",
+  "description": "Zyntra student placement and preparation platform",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test server.test.js",
+    "start:python": "python backend.py"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

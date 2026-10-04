@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSA Tracker | Zyntra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dsa.html">DSA Tracker</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="projects.html">Projects</a>
+        <a href="report.html">Weekly Report</a>
+        <a href="placements.html">Placements</a>
+        <a href="resources.html">Resources</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h2>DSA Tracker</h2>
+          <p>Topic-wise progress, difficulty balance, streak, and time spent.</p>
+        </div>
+        <div class="card tracker-card">
+          <div class="tracker-overview" id="tracker-overview"></div>
+          <div id="topic-progress" class="topic-list"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Practice log</h2>
+          <p>Record problems and focused time as you work through each topic.</p>
+        </div>
+        <div class="split-layout dsa-practice-layout">
+          <form id="dsa-session-form" class="card form-card">
+            <h3>Log a practice session</h3>
+            <label class="form-label">Topic<input id="dsa-topic" type="text" maxlength="60" placeholder="e.g. Graph traversal" required /></label>
+            <label class="form-label">Difficulty<select id="dsa-difficulty"><option value="easy">Easy</option><option value="medium" selected>Medium</option><option value="hard">Hard</option></select></label>
+            <label class="form-label">Problems solved<input id="dsa-solved-count" type="number" min="1" max="100" value="1" required /></label>
+            <label class="form-label">Practice time (minutes)<input id="dsa-minutes" type="number" min="1" max="480" value="25" required /></label>
+            <button class="btn btn-primary" type="submit">Save practice session</button>
+          </form>
+          <article class="card dsa-recent-card">
+            <h3>Recent practice</h3>
+            <div id="dsa-session-list" class="card-list"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

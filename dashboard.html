@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Zyntra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dsa.html">DSA Tracker</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="projects.html">Projects</a>
+        <a href="report.html">Weekly Report</a>
+        <a href="placements.html">Placements</a>
+        <a href="resources.html">Resources</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <aside class="guest-access-banner dashboard-preview-banner">
+      <div>
+        <span class="preview-label">Your dashboard preview · sample data</span>
+        <strong>See your preparation at a glance</strong>
+        <p>See how your tasks, practice, and goals come together in one place.</p>
+        <p id="guest-access-status" role="status" aria-live="polite"></p>
+      </div>
+      <a class="btn btn-primary" href="auth.html?returnTo=%2Fdashboard.html&amp;mode=signup">Make it yours <span aria-hidden="true">→</span></a>
+    </aside>
+
+    <main id="dashboard-workspace">
+      <section class="section">
+        <div class="section-heading">
+          <h2>Dashboard</h2>
+          <p>Overview of progress, milestones, and activity.</p>
+        </div>
+        <div class="dashboard-shortcuts">
+          <a href="dsa.html">Log DSA practice</a>
+          <a href="projects.html">Update projects</a>
+          <a href="report.html">View weekly report</a>
+          <a href="profile.html">Edit profile</a>
+        </div>
+        <div class="stats-grid">
+          <article class="card stat-card">
+            <h3>Productivity</h3>
+            <div id="productivity-summary"></div>
+          </article>
+          <article class="card stat-card">
+            <h3>DSA Progress</h3>
+            <div id="dsa-summary"></div>
+          </article>
+          <article class="card stat-card">
+            <h3>Focus & Goals</h3>
+            <div id="focus-summary"></div>
+          </article>
+          <article class="card stat-card">
+            <h3>Profile Snapshot</h3>
+            <div id="profile-summary"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Focus Session</h2>
+          <p>Log intentional study blocks and keep your preparation time visible.</p>
+        </div>
+        <div class="card focus-session-layout">
+          <form id="focus-session-form" class="focus-session-form">
+            <label class="form-label">Focus topic<input id="focus-topic" type="text" placeholder="e.g. Graph algorithms" maxlength="80" /></label>
+            <label class="form-label">Duration<select id="focus-minutes"><option value="25">25 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option><option value="90">90 minutes</option></select></label>
+            <button class="btn btn-primary" type="submit">Complete focus session</button>
+          </form>
+          <div id="focus-insights" class="focus-insights" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Readiness Center</h2>
+          <p>A concise view of the preparation signals that need your attention next.</p>
+        </div>
+        <div class="readiness-layout">
+          <article class="card readiness-score-card">
+            <p class="eyebrow">Job readiness</p>
+            <div id="readiness-score" class="readiness-score"></div>
+            <p id="readiness-summary" class="meta"></p>
+            <div id="readiness-level" class="readiness-level"></div>
+          </article>
+          <article class="card">
+            <h3>Recommended next actions</h3>
+            <div id="readiness-actions" class="action-list"></div>
+          </article>
+          <article class="card">
+            <h3>Upcoming deadlines</h3>
+            <div id="deadline-list" class="action-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Readiness breakdown</h2>
+          <p>Python analysis turns your activity into a clear, point-by-point preparation view.</p>
+        </div>
+        <div class="card analysis-card">
+          <div class="analysis-card-heading">
+            <div><p class="eyebrow">Analysis details</p><p id="analysis-status" class="meta">Start the Python analysis service to view live details.</p></div>
+            <span id="analysis-level" class="readiness-label">—</span>
+          </div>
+          <div id="analysis-breakdown" class="analysis-breakdown"></div>
+          <div id="analysis-priorities" class="action-list analysis-priorities"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Task Planner</h2>
+          <p>Keep daily priorities, deadlines, and action items in one place.</p>
+        </div>
+        <div class="card split-layout">
+          <form id="task-form" class="form-card">
+            <div class="task-form-heading">
+              <h3 id="task-form-heading">Add a new task</h3>
+              <p class="meta">Give your next action a clear name and deadline.</p>
+            </div>
+            <label class="form-label" for="task-title">Task title<input type="text" id="task-title" placeholder="e.g. Review graph traversal" maxlength="160" required /></label>
+            <label class="form-label">Due date<input type="date" id="task-due" /></label>
+            <label class="form-label" for="task-note">Notes <span class="meta">(optional)</span><textarea id="task-note" rows="3" maxlength="1000" placeholder="Add context or a helpful reminder"></textarea></label>
+            <button class="btn btn-primary" type="submit">Add task</button>
+            <button class="btn btn-secondary" id="cancel-task-edit" type="button" hidden>Cancel editing</button>
+          </form>
+          <div>
+            <div class="task-list-toolbar">
+              <div>
+                <h3>Your tasks</h3>
+                <p class="meta" id="task-list-summary" aria-live="polite"></p>
+              </div>
+              <label class="form-label" for="task-filter">Show
+                <select id="task-filter">
+                  <option value="all">All tasks</option>
+                  <option value="open">To do</option>
+                  <option value="completed">Completed</option>
+                </select>
+              </label>
+            </div>
+            <div id="task-list" class="card-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

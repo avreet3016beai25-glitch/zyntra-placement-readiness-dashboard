@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placements | Zyntra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dsa.html">DSA Tracker</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="projects.html">Projects</a>
+        <a href="report.html">Weekly Report</a>
+        <a href="placements.html">Placements</a>
+        <a href="resources.html">Resources</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h2>Placement pipeline</h2>
+          <p>Track target companies, application stages, and upcoming milestones.</p>
+        </div>
+        <div class="placement-overview">
+          <article class="card placement-metric"><span>Total companies</span><strong id="placement-total">0</strong></article>
+          <article class="card placement-metric"><span>In interview</span><strong id="placement-interview-count">0</strong></article>
+          <article class="card placement-metric"><span>Upcoming milestones</span><strong id="placement-upcoming-count">0</strong></article>
+        </div>
+        <div class="split-layout placement-layout">
+          <form id="placement-form" class="form-card">
+            <h3>Add a company</h3>
+            <input type="text" id="company-name" placeholder="Company name" required />
+            <label class="form-label">Milestone date<input type="date" id="company-date" required /></label>
+            <label class="form-label">Application stage<select id="company-stage"><option value="targeting">Targeting</option><option value="applied">Applied</option><option value="interview">Interview</option><option value="offer">Offer</option><option value="closed">Closed</option></select></label>
+            <label class="form-label">Application or careers page<input type="url" id="company-link" placeholder="https://careers.example/jobs" /></label>
+            <button class="btn btn-primary" type="submit">Add to pipeline</button>
+          </form>
+          <div class="placement-records">
+            <div class="placement-toolbar">
+              <p id="placement-count" class="meta">0 companies</p>
+              <label class="form-label">Search<input type="search" id="placement-search" placeholder="Company name" /></label>
+              <label class="form-label">Stage<select id="placement-filter"><option value="all">All stages</option><option value="targeting">Targeting</option><option value="applied">Applied</option><option value="interview">Interview</option><option value="offer">Offer</option><option value="closed">Closed</option></select></label>
+            </div>
+            <div id="placement-list" class="card-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

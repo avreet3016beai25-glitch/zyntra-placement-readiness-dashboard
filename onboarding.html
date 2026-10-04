@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onboarding | Zyntra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav>
+        <a href="auth.html">Login / Signup</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h2>Set up your profile</h2>
+          <p>Provide your current academic and placement preparation details for a tailored dashboard experience.</p>
+        </div>
+
+        <div class="card">
+          <form id="onboarding-form" class="form-card">
+            <input type="text" id="onboarding-name" placeholder="Your name" />
+            <input type="text" id="onboarding-branch" placeholder="Branch" />
+            <input type="text" id="onboarding-cgpa" placeholder="CGPA" />
+            <input type="text" id="onboarding-skills" placeholder="Skills (comma separated)" />
+            <input type="number" id="onboarding-solved" placeholder="DSA solved" />
+            <input type="number" id="onboarding-easy" placeholder="Easy solved" />
+            <input type="number" id="onboarding-medium" placeholder="Medium solved" />
+            <input type="number" id="onboarding-hard" placeholder="Hard solved" />
+            <input type="number" id="onboarding-streak" placeholder="Current streak" />
+            <input type="number" id="onboarding-time" placeholder="Hours spent" />
+            <input type="text" id="onboarding-goals" placeholder="Daily goals (comma separated)" />
+            <textarea id="onboarding-work" rows="3" placeholder="Describe your recent focus and achievements"></textarea>
+            <input type="text" id="onboarding-project" placeholder="Current project" />
+            <input type="text" id="onboarding-cert" placeholder="Current certification" />
+            <input type="text" id="onboarding-placement" placeholder="Placement target" />
+            <button class="btn btn-primary" type="submit">Save and Open Dashboard</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

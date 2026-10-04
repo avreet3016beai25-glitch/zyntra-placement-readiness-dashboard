@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certifications | Zyntra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Zyntra</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dsa.html">DSA Tracker</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="projects.html">Projects</a>
+        <a href="report.html">Weekly Report</a>
+        <a href="placements.html">Placements</a>
+        <a href="resources.html">Resources</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h2>Certifications</h2>
+          <p>Organize your completed and in-progress certificates.</p>
+        </div>
+        <div class="linkedin-certification-panel">
+          <div>
+            <h3>LinkedIn profile</h3>
+            <p id="linkedin-certification-preview" aria-live="polite">No LinkedIn profile link saved yet.</p>
+          </div>
+          <form id="linkedin-certification-form" class="form-card">
+            <label class="form-label">LinkedIn profile URL<input type="url" id="linkedin-certification-url" placeholder="https://www.linkedin.com/in/your-name" /></label>
+            <button class="btn btn-secondary" type="submit">Save LinkedIn link</button>
+          </form>
+        </div>
+        <div class="card split-layout">
+          <form id="certification-form" class="form-card">
+            <h3>Add Certification</h3>
+            <input type="text" id="cert-title" placeholder="Title" required />
+            <input type="text" id="cert-org" placeholder="Organization" required />
+            <input type="date" id="cert-date" required />
+            <label class="form-label">Status<select id="cert-status"><option value="completed">Completed</option><option value="in-progress">In progress</option></select></label>
+            <input type="text" id="cert-id" placeholder="Credential ID" />
+            <input type="text" id="cert-skills" placeholder="Skills gained" />
+            <label class="form-label">Credential or verification page<input type="url" id="cert-link" placeholder="https://issuer.example/verify" /></label>
+            <input type="file" id="cert-file" accept="application/pdf" />
+            <button class="btn btn-primary" type="submit">Save Certificate</button>
+          </form>
+          <div class="certification-records">
+            <div class="certification-toolbar">
+              <p id="certification-count" class="meta">0 certificates</p>
+              <label class="form-label">Search<input type="search" id="certification-search" placeholder="Name, issuer, skill, ID" /></label>
+              <label class="form-label">Status<select id="certification-filter"><option value="all">All statuses</option><option value="completed">Completed</option><option value="in-progress">In progress</option></select></label>
+            </div>
+            <div id="certification-list" class="card-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
